@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50; /* Green color */
+}
+
+#quote {
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid #4CAF50;
+    background-color: #e8f5e9; /* Light green */
+    border-radius: 5px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+#contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact-list li {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#contact-list li:hover {
+    background-color: #e0f7fa; /* Light cyan background */
+    transform: scale(1.02); /* Slight zoom effect */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#contact-list button {
+    background-color: #f44336; /* Red for delete */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#contact-list button:hover {
+    background-color: #d32f2f; /* Darker red */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}

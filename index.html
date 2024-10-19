@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Contact App</title>
+</head>
+<body>
+    <h1>Contact App</h1>
+    <div id="quote" style="margin: 10px; font-style: italic; color: blue;"></div>
+    <input type="text" id="search" placeholder="Search Contacts" oninput="filterContacts()">
+    
+    <form id="contact-form" onsubmit="handleSubmit(event)">
+        <input type="hidden" id="edit-index">
+        <input type="text" id="name" placeholder="Name" required><br>
+        <input type="tel" id="phone" placeholder="Phone" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="date" id="birthday" placeholder="Birthday"><br>
+        <input type="file" id="profile-pic" accept="image/*"><br>
+        <textarea id="notes" placeholder="Notes"></textarea><br>
+        
+        <div>
+            <label for="favorite">Favorite:</label>
+            <input type="checkbox" id="favorite">
+        </div>
+
+        <div>
+            <label for="social-media">Social Media:</label>
+            <input type="text" id="social-media" placeholder="Social Media Links">
+        </div>
+
+        <button type="submit">Add Contact</button>
+    </form>
+
+    <ul id="contact-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
