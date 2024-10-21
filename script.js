@@ -1,4 +1,3 @@
-
 const contacts = [];
 let editIndex = -1;
 
@@ -10,14 +9,15 @@ const quotes = [
     "Success is not for the lazy."
 ];
 
+document.addEventListener('DOMContentLoaded', () => {
+    displayRandomQuote();
+});
+
 function displayRandomQuote() {
     const quoteElement = document.getElementById('quote');
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     quoteElement.innerText = randomQuote;
 }
-
-// Call the function on page load
-displayRandomQuote();
 
 function filterContacts() {
     const searchValue = document.getElementById('search').value.toLowerCase();
@@ -53,14 +53,32 @@ function handleSubmit(event) {
     };
 
     if (editIndex >= 0) {
-        contacts[editIndex] = newContact;
+        contacts[editIndex] = newContact; // Update existing contact
         editIndex = -1; // Reset after editing
     } else {
-        contacts.push(newContact);
+        contacts.push(newContact); // Add new contact
     }
 
     displayContacts(contacts);
     document.getElementById('contact-form').reset();
+    document.querySelector('button[type="submit"]').textContent = 'Add Contact'; // Reset button text
+
+    // Fetching the new contact to save it on the server
+    fetch('https://contact-app-managment-1.onrender.com/contacts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newContact)
+    })
+    .then(response => {
+        if (!response.ok) {
+            console.log('Error:', response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => console.log('Data:', data))
+    .catch(error => console.error('Error:', error));
 }
 
 function deleteContact(index) {
