@@ -34,4 +34,5 @@ Technologies Used
  Support and Contact Details
 
 Email: [faith.njau@student.moringaschool.com]
+link of demo[https://fay-ui.github.io/contact-app-managment/]
 
