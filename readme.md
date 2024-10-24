@@ -17,7 +17,7 @@ Setup/Installation Instructions
 
 Live Server
 
-You can view the web live at [Contact Management App](https://github.com/fay-ui/contact-app-).
+You can view the web live at(https://github.com/fay-ui/contact-app-managment/).
 
  Known Bugs
 
@@ -34,5 +34,5 @@ Technologies Used
  Support and Contact Details
 
 Email: [faith.njau@student.moringaschool.com]
-link of demo[https://fay-ui.github.io/contact-app-managment/]
+link of demo[https://www.wevideo.com/view/3593431177]
 
