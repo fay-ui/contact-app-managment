@@ -33,6 +33,6 @@ Technologies Used
 
  Support and Contact Details
 
-Email: [faith.njau@student.moringaschool.com]
+
 link of demo[https://www.wevideo.com/view/3593431177]
 
